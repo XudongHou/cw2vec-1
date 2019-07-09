@@ -17,7 +17,7 @@ import tensorflow as tf
 from pylab import mpl
 from matplotlib.font_manager import FontProperties
 
-font_set = FontProperties(fname=r"/Library/Fonts/Arial Unicode.ttf", size=15)
+# font_set = FontProperties(fname=r"/Library/Fonts/Arial Unicode.ttf", size=15)
 current_relative_path = lambda x: os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), x))
 
 
@@ -112,7 +112,7 @@ class Cw2VecSumStrokeTrain(object):
                             self.model_save(session, current_relative_path("../../../model/cw2vec/"), "model.ckpt",
                                             step)
             final_embeddings = normalized_embeddings.eval()
-            self.plot_labels(final_embeddings, reverse_dictionary)
+            # self.plot_labels(final_embeddings, reverse_dictionary)
             if save_model:
                 self.model_save(session, current_relative_path("../../../model/cw2vec/"), "model.ckpt", num_steps)
 
